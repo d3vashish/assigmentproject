@@ -1,0 +1,157 @@
+/* Global CSS Variables for consistency */
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #333;
+  --button-bg-color: #004cff;
+  --border-color: #e1e1e1;
+  --font-size-lg: 18px;
+  --font-size-md: 16px;
+  --font-size-sm: 14px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.billing-toggle button {
+  padding: 12px 30px;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.billing-toggle .active {
+  background-color: #f3f4ff;
+  color: #004cff;
+  border-color: #004cff;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pricing-plan.popular {
+  background-color: #f1f7ff;
+  border: 2px solid #004cff;
+  box-shadow: 0px 0px 20px rgba(0, 76, 255, 0.2);
+}
+
+.pricing-plan h3 {
+  font-size: var(--font-size-lg);
+}
+
+.pricing-plan .price {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.pricing-plan .original-price {
+  font-size: 16px;
+  color: #888;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.pricing-plan .discount {
+  color: red;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.pricing-plan .credits {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.pricing-plan ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: auto; /* Ensures the button stays at the bottom */
+}
+
+.pricing-plan ul li {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.pricing-plan .btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-bg-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.pricing-plan .btn:hover {
+  background-color: #003bbd;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.booster-btn {
+  background-color: #001b80;
+}
+
+.trial .btn {
+  background-color: #f3f4ff;
+  color: #004cff;
+  border: 1px solid #004cff;
+}
+
+.enterprise .btn {
+  background-color: #fff;
+  color: #004cff;
+  border: 1px solid #004cff;
+}
+
+@media (max-width: 768px) {
+  .pricing-plans {
+    flex-direction: column;
+  }
+
+  .pricing-plan {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
